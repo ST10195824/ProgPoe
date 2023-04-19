@@ -9,8 +9,8 @@ namespace ProgPoe.Classes
     internal class Ingredient
     {
         private String IngredientName;
-        private float IngredientScale = 1;
-        private float IngredientAmount;
+        private Double IngredientScale = 1;
+        private Double IngredientAmount;
         private string IngredientMesurementUnit = "tablespoon";
 
         public Ingredient()
@@ -18,32 +18,58 @@ namespace ProgPoe.Classes
 
         }
 
-        public Ingredient(string name, float scale, float amount, string mesurementUnit)
+        public Ingredient(string name, float scale, double amount, string mesurementUnit)
         {
-            IngredientName = name;
-            IngredientScale = scale;
-            IngredientAmount = amount;
-            IngredientMesurementUnit = mesurementUnit;
+            this.IngredientName = name;
+            this.IngredientScale = scale;
+            this.IngredientAmount = amount;
+            this.IngredientMesurementUnit = mesurementUnit;
         }
 
         public String Name(String name)
         {
-            IngredientName = name;
-            return IngredientName;
+            this.IngredientName = name;
+            return this.IngredientName;
         }
 
-        public float Amount(float amount)
+        public String Name()
         {
-            IngredientAmount = amount;
-            return IngredientAmount * IngredientScale;
+            return this.IngredientName;
         }
 
-        public float SetScale(float scale)
+        public double Amount(double amount)
         {
-            IngredientScale = scale;
-            return IngredientScale;
+            this.IngredientAmount = amount;
+            return this.IngredientAmount * this.IngredientScale;
         }
 
+        public double Amount()
+        {
+            return this.IngredientAmount * this.IngredientScale;
+        }
+
+        public double SetScale(double scale)
+        {
+            this.IngredientScale = scale;
+            return this.IngredientScale;
+        }
+
+        public double Scale()
+        {
+            return this.IngredientScale;
+        }
+
+
+        public String Unit(string unit)
+        {
+            this.IngredientMesurementUnit = unit;
+            return this.IngredientMesurementUnit;
+        }
+
+        public String Unit()
+        {
+            return this.IngredientMesurementUnit;
+        }
 
     }
 }
