@@ -18,8 +18,10 @@ namespace ProgPoe.Classes
         {
             Console.WriteLine("enter the name of the recipe:");
             var name = Console.ReadLine();
+
             Console.WriteLine("enter the number of ingredients:");
             var numIngredients = Convert.ToInt32(Console.ReadLine());
+            
             Console.WriteLine("enter the number of steps:");
             var numSteps = Convert.ToInt32(Console.ReadLine());
 
